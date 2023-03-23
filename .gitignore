@@ -24,4 +24,4 @@ yarn-error.log*
 
 # APIKey
 
-src/config/APIKey.js
+src/config/key.js

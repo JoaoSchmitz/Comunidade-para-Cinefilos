@@ -1,5 +1,4 @@
 import './App.css';
-import { APIKey } from './config/APIKey';
 import { useState, useEffect } from 'react'
 import { APIKey } from './config/key';
 
