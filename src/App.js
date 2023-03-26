@@ -1,4 +1,6 @@
 import { GlobalStyle } from './styles/global'
+import React from 'react';
+import RoutesApp from './routes';
 
 function App() {
 
@@ -21,7 +23,7 @@ function App() {
 
   return (
     <>
-      <p>Comunidade para cinéfilos</p>
+      <RoutesApp />
       <GlobalStyle />
     </>
   );
