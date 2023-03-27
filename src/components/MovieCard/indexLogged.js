@@ -16,6 +16,7 @@ const MovieCardLogged = props => {
 
   const handleFavorite = () => {
     setFav(!fav)
+    
   }
 
   const handleWatched = () => {

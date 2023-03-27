@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         --textColor: #3FB6CA;
         --textColor2: #CBA238;
         --linearColor: linear-gradient(
-          rgba(44, 94, 140, 0.7),
+          rgba(44, 94, 140, 1),
           rgba(9, 43, 73, 1)
         );
     }
