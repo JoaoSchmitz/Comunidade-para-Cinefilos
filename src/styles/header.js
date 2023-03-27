@@ -22,8 +22,10 @@ export const HeaderContainer = styled.div`
 
 `
 
-export const SidebarIconBox = styled.div`
+export const SidebarIconBox = styled.button`
   color: var(--textColor);
+  background: transparent;
+  border: none;
 
 `
 
