@@ -2,51 +2,58 @@ import { Link } from 'react-router-dom'
 
 import { IconContext } from "react-icons"
 import { FaStar } from 'react-icons/fa'
-import { BsEyeSlash, BsEyeFill } from 'react-icons/bs'
-import { RiHeartAddLine, RiHeartFill } from 'react-icons/ri'
 
-import { MovieContainer, MoviePoster, FavoriteIcon, WatchedIcon, MovieDetailsButton } from '../../styles/movieCard'
+import { MovieContainer, MoviePoster, FavoriteIcon, WatchedIcon, MovieDetailsButton, MovieVoteAverage, WatchedIconBox, FavoriteIconBox, FavoriteIconMarked, WatchedIconMarked } from '../../styles/movieCard'
+import { useState } from 'react'
 
 
 
 const MovieCardLogged = props => {
 
   const imagePath = 'https://image.tmdb.org/t/p/w500/'
+  const [fav, setFav] = useState(false)
+  const [watched, setWatched] = useState(false)
+
+  const handleFavorite = () => {
+    setFav(!fav)
+  }
+
+  const handleWatched = () => {
+    setWatched(!watched)
+  }
 
   return (
-    <MovieContainer>
+    <MovieContainer className={watched? 'active' : ''}>
 
-      <MoviePoster src={ imagePath + props.movie.poster_path } alt={props.movie.title}/>
+      <MoviePoster className={fav ? 'active' : ''} src={ imagePath + props.movie.poster_path } alt={props.movie.title}/>
 
-    {/* Customizes the icon */}
-      <IconContext.Provider value={{ color: "gray", size: "" }}>
-        <FavoriteIcon onClick={""}> {/* Change this */}
+        <FavoriteIconBox onClick={handleFavorite}> {/* Change this */}
+          {
+            fav ?
+            <FavoriteIconMarked size="1.8rem"/> :
+            <FavoriteIcon size="1.8rem"/>
+          }
+        </FavoriteIconBox>
 
-        { props.isFavorite ? <RiHeartFill/> : <RiHeartAddLine/>}
-
-        </FavoriteIcon>
-      </IconContext.Provider>
-
-    {/* Customizes the icon */}
-      <IconContext.Provider value={{ color: "gray", size: "" }}>
-        <WatchedIcon onClick={""}> {/* Change this */}
-
-        { props.isWatched ? <BsEyeSlash/> : <BsEyeFill/> }
-
-        </WatchedIcon>
-      </IconContext.Provider>
+        <WatchedIconBox onClick={handleWatched}> {/* Change this */}
+        {
+          watched ?
+          <WatchedIconMarked size="1.8rem"/> :
+          <WatchedIcon size="1.8rem"/>
+        }
+        </WatchedIconBox>
 
       <h2> {props.movie.title} </h2>
 
     {/* Customizes the icon */}
-      <IconContext.Provider value={{ color: "rgba(203, 162, 56, 1)", size: "" }}>
-        <p>
+      <IconContext.Provider value={{ color: "var(--textColor2)", size: "1.1rem" }}>
+        <MovieVoteAverage>
           <FaStar/> {props.movie.vote_average}
-        </p>
+        </MovieVoteAverage>
       </IconContext.Provider>
-
+  
       <MovieDetailsButton>
-        <Link to={`/props.movie/${props.movie.id}`}>
+        <Link to={`/movie/${props.movie.id}`}>
           Detalhes
         </Link>
       </MovieDetailsButton>

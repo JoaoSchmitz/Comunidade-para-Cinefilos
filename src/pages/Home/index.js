@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       Home
-      <MovieList filter={'popular'} isLogged={false}/>
+      <MovieList filter={'popular'} isLogged={true}/>
     </div>
   )
 }

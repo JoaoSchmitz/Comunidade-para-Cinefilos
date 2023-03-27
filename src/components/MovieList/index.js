@@ -16,6 +16,10 @@ const MovieList = props => {
   // Raises the page number for the fetch
   const handlePage = () => {
     setPage(Number(page)+1)
+    
+    window.scrollTo({
+      top: 0
+    })
   }
 
   // Is called everytime the page is reloaded and when the page or the filter gets modified
@@ -55,7 +59,7 @@ const MovieList = props => {
       </ListContainer>
 
       <NextPageButton onClick={handlePage}>
-        Mais filmes
+        --- Mais filmes ---
       </NextPageButton>
     </MovieListContainer>
   )

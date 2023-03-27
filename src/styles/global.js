@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         text-decoration: none;
+        scroll-behavior: smooth;
     }
     
     html {
@@ -14,6 +15,10 @@ export const GlobalStyle = createGlobalStyle`
         --thirdColor: #1B2630;
         --textColor: #3FB6CA;
         --textColor2: #CBA238;
+        --linearColor: linear-gradient(
+          rgba(44, 94, 140, 0.7),
+          rgba(9, 43, 73, 1)
+        );
     }
 
     body {
