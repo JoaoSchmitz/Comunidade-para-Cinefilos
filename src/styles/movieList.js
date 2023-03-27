@@ -2,7 +2,8 @@ import styled from "styled-components"
 
 export const MovieListContainer = styled.div`
   text-align: center;
-  margin: 4rem 15%;
+  margin: 0 15%;
+  
 `
 
 export const ListContainer = styled.div`

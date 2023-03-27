@@ -1,13 +1,18 @@
 import React from 'react'
+import Header from '../../components/Header'
 import MovieList from '../../components/MovieList'
+
+import { HomeContainer } from '../../styles/home'
 
 const Home = () => {
     //Testando o Routes
 
   return (
     <div>
-      Home
-      <MovieList filter={'popular'} isLogged={true}/>
+      <Header />
+      <HomeContainer>
+        <MovieList filter={'popular'} isLogged={true}/>
+      </HomeContainer>
     </div>
   )
 }
