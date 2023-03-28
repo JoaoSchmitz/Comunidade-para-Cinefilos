@@ -1,15 +1,18 @@
-import React from 'react'
-import Header from '../../components/Header'
+import React, { useState, useEffect } from 'react'
 import MovieList from '../../components/MovieList'
+import { APIKey } from '../../config/key'
+import useAuth from '../../hooks/useAuth'
 
 import { HomeContainer } from '../../styles/home'
 
 const Home = () => {
-    //Testando o Routes
+  const { createToken } = useAuth()
 
+  useEffect(() => {
+    createToken()
+  }, [])
   return (
     <div>
-      <Header />
       <HomeContainer>
         <MovieList filter={'popular'} isLogged={true}/>
       </HomeContainer>
