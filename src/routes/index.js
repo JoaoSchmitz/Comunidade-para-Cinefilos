@@ -4,7 +4,6 @@ import AccountProfile from "../pages/AccountProfile";
 import Home from '../pages/Home'
 import MovieDetails from '../pages/MovieDetails'
 import MovieSearch from '../pages/MovieSearch'
-import Sidebar from "../components/Sidebar";
 import Header from '../components/Header'
 import Login from "../pages/Login";
 
@@ -13,7 +12,6 @@ const RoutesApp = () => {
         <Router>
             <Fragment>
                 <Header />
-                <Sidebar />
                 <Routes>
                     <Route path="/" element={<Home />}/>
                     <Route path="movie/:id" element={<MovieDetails />}/>
