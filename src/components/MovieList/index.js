@@ -3,12 +3,16 @@ import { useState, useEffect, useRef } from 'react'
 
 import MovieCardLogged from '../MovieCard/indexLogged'
 import MovieCardUnlogged from '../MovieCard/indexUnlogged'
-import { MovieListContainer, ListContainer, NextPageButton } from '../../styles/movieList'
+
+import useAuth from '../../hooks/useAuth'
+
+import { MovieListContainer, ListContainer, NextPageButton } from './style.js'
 
 
 
 const MovieList = props => {
-    
+  
+  const { isLogged } = useAuth()
   const [movies, setMovies] = useState([])
   const [page, setPage] = useState(1)
   const previousFilter = useRef('')
@@ -45,13 +49,13 @@ const MovieList = props => {
     <MovieListContainer>
       <ListContainer>
         {
-          props.isLogged && 
+          isLogged && 
             movies.map(movie => 
               <MovieCardLogged key={movie.id} movie={movie}/>
             )
         }
         {
-          !props.isLogged && 
+          !isLogged && 
             movies.map(movie => 
               <MovieCardUnlogged key={movie.id} movie={movie}/>
             )

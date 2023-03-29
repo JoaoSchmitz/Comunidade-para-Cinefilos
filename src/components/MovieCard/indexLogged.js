@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { IconContext } from "react-icons"
 import { FaStar } from 'react-icons/fa'
 
-import { MovieContainer, MoviePoster, FavoriteIcon, WatchedIcon, MovieDetailsButton, MovieVoteAverage, WatchedIconBox, FavoriteIconBox, FavoriteIconMarked, WatchedIconMarked } from '../../styles/movieCard'
+import { MovieContainer, MoviePoster, FavoriteIcon, WatchedIcon, MovieDetailsButton, MovieVoteAverage, WatchedIconBox, FavoriteIconBox, FavoriteIconMarked, WatchedIconMarked } from './style.js'
 import { useState } from 'react'
 
 
@@ -49,7 +49,7 @@ const MovieCardLogged = props => {
     {/* Customizes the icon */}
       <IconContext.Provider value={{ color: "var(--textColor2)", size: "1.1rem" }}>
         <MovieVoteAverage>
-          <FaStar/> {props.movie.vote_average}
+          <FaStar/> {props.movie.vote_average.toFixed(1)}
         </MovieVoteAverage>
       </IconContext.Provider>
   

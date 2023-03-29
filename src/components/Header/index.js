@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { HeaderContainer, ProjectTitle, SearchButton, SearchForm, SearchIcon, SearchInput, SidebarIcon, SidebarIconBox } from '../../styles/header'
+import { HeaderContainer, ProjectTitle, SearchButton, SearchForm, SearchIcon, SearchInput, SidebarIcon, SidebarIconBox } from './style.js'
 import Sidebar from '../Sidebar'
 
 //import { FaBars } from 'react-icons/fa'

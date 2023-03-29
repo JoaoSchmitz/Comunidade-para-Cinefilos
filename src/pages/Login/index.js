@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth'
 import * as C from './style'
@@ -9,7 +9,7 @@ const Login = () => {
 
     useEffect(() => {
         createSession()
-    }, [])
+    })
 
     return (
         <C.Main>
