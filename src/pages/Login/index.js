@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth'
 import * as C from './style'
 
@@ -13,8 +12,10 @@ const Login = () => {
 
     return (
         <C.Main>
-            <div>O login foi realizado com sucesso!</div>
-            <Link to="/profile">Acessar sua conta</Link>
+            <C.Mensagem>O login foi realizado com sucesso!</C.Mensagem>
+            <C.Redirecionar>
+                <C.StyledLink to="/profile">Clique aqui</C.StyledLink> para acessar sua conta
+            </C.Redirecionar>
         </C.Main>
     )
 }
