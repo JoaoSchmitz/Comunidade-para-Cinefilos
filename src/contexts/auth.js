@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
         fetch(`
         https://api.themoviedb.org/3/authentication/token/new?api_key=${APIKey}`)
         .then(response => response.json())
-        .then(data => {localStorage.setItem("session_token", data.request_token); console.log(data)})
+        .then(data => {localStorage.setItem("session_token", data.request_token)})
         .catch(err => console.log(err))
     };
 

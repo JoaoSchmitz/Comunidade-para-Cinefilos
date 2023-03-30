@@ -8,7 +8,7 @@ const Login = () => {
 
     useEffect(() => {
         createSession()
-    })
+    }, [])
 
     return (
         <C.Main>

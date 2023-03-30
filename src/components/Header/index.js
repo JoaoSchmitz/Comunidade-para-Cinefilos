@@ -21,7 +21,6 @@ const Header = () => {
   
   const handleSidebar = () => {
     setSidebar(!sidebar)
-    console.log(sidebar)
   }
 
   return (
