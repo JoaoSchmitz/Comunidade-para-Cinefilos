@@ -12,7 +12,7 @@ const MovieCardUnlogged = props => {
   const imagePath = 'https://image.tmdb.org/t/p/w500/'
 
   return (
-    <MovieContainer>
+    <MovieContainer className={props.isRecommended ? 'Recommended' : ''}>
 
       <MoviePoster src={ imagePath + props.movie.poster_path } alt={props.movie.title}/>
 

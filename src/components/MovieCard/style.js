@@ -24,6 +24,10 @@ export const MovieContainer = styled.div`
     padding-bottom: 55%;
   }
 
+  &.Recommended {
+    background: var(--thirdColor);
+  }
+
 `
 
 export const MoviePoster = styled.img`

@@ -24,7 +24,7 @@ const MovieCardLogged = props => {
   }
 
   return (
-    <MovieContainer className={watched? 'active' : ''}>
+    <MovieContainer className={watched ? 'active' : '' + props.isRecommended ? 'Recommended' : '' }>
 
       <MoviePoster className={fav ? 'active' : ''} src={ imagePath + props.movie.poster_path } alt={props.movie.title}/>
 
