@@ -6,6 +6,8 @@ import MovieDetails from '../pages/MovieDetails'
 import MovieSearch from '../pages/MovieSearch'
 import Header from '../components/Header'
 import Login from "../pages/Login";
+import FavoriteList from "../pages/FavoriteList";
+import ViewedList from "../pages/ViewedList";
 
 const RoutesApp = () => {
     return (
@@ -18,6 +20,8 @@ const RoutesApp = () => {
                     <Route path="search" element={<MovieSearch />}/>
                     <Route path="/profile" element={<AccountProfile />}/>
                     <Route path="/login" element={<Login />}/>
+                    <Route path="/favorites" element={<FavoriteList />} />
+                    <Route path="/watchlist" element={<ViewedList />} />
                 </Routes>
             </Fragment>
         </Router>

@@ -22,7 +22,10 @@ const Sidebar = ({ active }) => {
             (isLogged?<UserCard />:<Button onClick={requestSession} text={'Entrar'}/>)
           }
         </C.Item>
-        <SidebarItems Text='Home' Icon={FaHome}/>
+        <SidebarItems Text='Home' Icon={FaHome} Page=""/>
+        <SidebarItems Text='Discover' Icon={FaHome} Page=""/>
+        <SidebarItems Text='Favoritos' Icon={FaHome} Page="favorites"/>
+        <SidebarItems Text="Assistidos" Icon={FaHome} Page="watchlist"/>
       </C.Container>
     </C.SideContainer>
   )

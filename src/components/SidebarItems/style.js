@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
 export const Item = styled.li`
@@ -10,4 +11,14 @@ export const Item = styled.li`
 
 export const Text = styled.span`
     margin-left: 15px;
+`
+
+export const StyledLink = styled(Link)`
+    color: var(--textColor);
+    font-size: 18px;
+    margin: 5px 10px;
+
+    &:hover{
+        text-decoration: underline;
+    }
 `
