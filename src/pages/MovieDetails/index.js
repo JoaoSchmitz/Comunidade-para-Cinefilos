@@ -14,7 +14,7 @@ import MovieCardUnlogged from "../../components/MovieCard/indexUnlogged"
 import { HorizontalLine, PageContainer } from "../../styles/pagesGlobal"
 import { MovieDetailFavoriteIcon, MovieDetailFavoriteIconBox, MovieDetailFavoriteIconMarked, 
   ListContainer, MovieDetailsContainer, MovieDetailPoster, MovieProperty, MoviePropertyBox, 
-  MovieTagline, MovieDetailTitle, MovieDetailVoteAverage, ReviewButton, ReviewDescriptionInput, 
+  MovieTagline, MovieDetailTitle, MovieDetailVoteAverage, ReviewButton, 
   ReviewForm, ReviewIcon, ReviewRatingInput, ReviewsContainer, SectionTitle, MovieDetailWatchedIcon, 
   MovieDetailWatchedIconBox, MovieDetailWatchedIconMarked
 } from "./style"
@@ -26,7 +26,7 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null)
   const [recommendedMovies, setRecommendedMovies] = useState([])
   const [reviews, setReviews] = useState([])
-  const [newReview, setNewReview] = useState('')
+  // const [newReview, setNewReview] = useState('')
   const [newReviewRating, setNewReviewRating] = useState(null)
   const imagePath = 'https://image.tmdb.org/t/p/w500/'
   let reviewId = 0
@@ -60,7 +60,7 @@ const MovieDetails = () => {
   useEffect(() => {
     setMovie(null)
     setRecommendedMovies([])
-    setNewReview('')
+    // setNewReview('')
 
   // Fetch for movie details
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKey}&language=en-US`)

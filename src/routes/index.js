@@ -8,6 +8,7 @@ import Header from '../components/Header'
 import Login from "../pages/Login";
 import FavoriteList from "../pages/FavoriteList";
 import ViewedList from "../pages/ViewedList";
+import Discover from "../pages/Discover";
 
 const RoutesApp = () => {
     return (
@@ -16,8 +17,9 @@ const RoutesApp = () => {
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />}/>
-                    <Route path="movie/:id" element={<MovieDetails />}/>
-                    <Route path="search" element={<MovieSearch />}/>
+                    <Route path="/discover" element={<Discover />}/>
+                    <Route path="/movie/:id" element={<MovieDetails />}/>
+                    <Route path="/search" element={<MovieSearch />}/>
                     <Route path="/profile" element={<AccountProfile />}/>
                     <Route path="/login" element={<Login />}/>
                     <Route path="/favorites" element={<FavoriteList />} />

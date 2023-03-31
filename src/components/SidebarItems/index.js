@@ -1,9 +1,9 @@
 import React from 'react'
 import * as C from './style'
 
-const SidebarItems = ({ Text, Icon, Page }) => {
+const SidebarItems = ({ Text, Icon, Page, closeSidebar }) => {
   return (
-    <C.Item>
+    <C.Item onClick={closeSidebar}>
       <C.StyledLink to={`/${Page}`}>
         <Icon />
         <C.Text>
