@@ -29,6 +29,7 @@ const MovieDetails = () => {
   const [newReview, setNewReview] = useState('')
   const [newReviewRating, setNewReviewRating] = useState(null)
   const imagePath = 'https://image.tmdb.org/t/p/w500/'
+  let reviewId = 0
 
   const formatCurrency = number => {
     return number.toLocaleString("en-US", {
@@ -52,9 +53,7 @@ const MovieDetails = () => {
 
     fetch(`https://api.themoviedb.org/3/movie/${id}/rating?api_key=${APIKey}&session_id=${localStorage.getItem("api_id")}`, init)
     .then(response => response.json())
-    .then(data => {
-        localStorage.setItem("api", data.session_id);
-    })
+    .then(data => console.log(data))
     .catch(err => console.log(err))
   }
 
@@ -214,7 +213,7 @@ const MovieDetails = () => {
                 {
                   reviews &&
                     reviews.map(review => 
-                      <MovieReviewCard key={movie.id} review={review}/>
+                      <MovieReviewCard key={reviewId++} review={review}/>
                     )
                 }
               </ReviewsContainer>
