@@ -7,6 +7,8 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         text-decoration: none;
         scroll-behavior: smooth;
+
+        font-family: 'Inter', sans-serif;
     }
     
     html {

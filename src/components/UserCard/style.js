@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const User = styled.div`
     height: 80%;
-    padding: 5px 10px;
-    font-size: 18px;
+    padding: 10px 10px;
+    font-size: 14px;
     color: white;
-    background-color: lightblue;
+    background-color: var(--secondColor);
     border-radius: 5px;
 
     display: flex;
@@ -15,8 +15,8 @@ export const User = styled.div`
 
 export const Imagem = styled.img`
     display: block;
-    height: 80px;
-    width: 80px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
 `
 
