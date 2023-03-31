@@ -37,6 +37,27 @@ const MovieDetails = () => {
     })
   }
 
+  const createReview = () => {
+    const bodyConfig = {
+      value: newReviewRating
+    }
+
+    const init = {
+      method: "POST",
+      headers: {
+          "Content-type": "application/json"
+      },
+      body: JSON.stringify(bodyConfig)
+    }
+
+    fetch(`https://api.themoviedb.org/3/movie/${id}/rating?api_key=${APIKey}&session_id=${localStorage.getItem("api_id")}`, init)
+    .then(response => response.json())
+    .then(data => {
+        localStorage.setItem("api", data.session_id);
+    })
+    .catch(err => console.log(err))
+  }
+
   useEffect(() => {
     setMovie(null)
     setRecommendedMovies([])
@@ -93,9 +114,9 @@ const MovieDetails = () => {
                   <MovieDetailFavoriteIconBox onClick={handleFavorite}> {/* Change this */}
                     {
                       fav ?
-                      <MovieDetailFavoriteIconMarked size="1.8rem"/>
+                      <MovieDetailFavoriteIconMarked size="3rem"/>
                       :
-                      <MovieDetailFavoriteIcon size="1.8rem"/>
+                      <MovieDetailFavoriteIcon size="3rem"/>
                     }
                   </MovieDetailFavoriteIconBox>
               }
@@ -104,9 +125,9 @@ const MovieDetails = () => {
                   <MovieDetailWatchedIconBox onClick={handleWatched}> {/* Change this */}
                   {
                     watched ?
-                    <MovieDetailWatchedIconMarked size="1.8rem"/>
+                    <MovieDetailWatchedIconMarked size="3rem"/>
                     :
-                    <MovieDetailWatchedIcon size="1.8rem"/>
+                    <MovieDetailWatchedIcon size="3rem"/>
                   }
                   </MovieDetailWatchedIconBox>
               }
@@ -168,7 +189,7 @@ const MovieDetails = () => {
 
               {
                 isLogged &&
-                <ReviewForm onSubmit={''}>
+                <ReviewForm onSubmit={createReview}>
                   <ReviewRatingInput
                     type='number'
                     placeholder='Dê uma nota:'
@@ -177,12 +198,12 @@ const MovieDetails = () => {
                     min="1"
                     max="10"
                   />
-                  <ReviewDescriptionInput
+                  {/* <ReviewDescriptionInput
                     type='text'
                     placeholder='Escreva sua review:'
                     onChange={(e) => setNewReview(e.target.value)}
                     value={newReview}
-                  />
+                  /> */}
                   <ReviewButton type='submit'>
                     <ReviewIcon size='1.8rem'/>
                   </ReviewButton>

@@ -31,8 +31,8 @@ export const MovieDetailPoster = styled.img`
 
 export const MovieDetailFavoriteIconBox = styled.div`
   position: absolute;
-  top: 3.5%;
-  left: 10%;
+  top: 6.5rem;
+  left: 24rem;
   color: gray;
 
 `
@@ -59,8 +59,8 @@ export const MovieDetailFavoriteIconMarked = styled(RiHeartFill)`
 
 export const MovieDetailWatchedIconBox = styled.div`
   position: absolute;
-  top: 3.5%;
-  right: 10%;
+  top: 6.5rem;
+  right: 24rem;
   color: gray;
 
 `
@@ -167,7 +167,6 @@ export const ReviewRatingInput = styled.input`
   width: 15%;
   border: none;
   padding: .8rem 1.2rem;
-  border-right: 2px solid var(--textColor);
   border-radius: 10px 0 0 10px;
   font-size: 1rem;
   color: var(--textColor);
@@ -181,7 +180,7 @@ export const ReviewRatingInput = styled.input`
 export const ReviewDescriptionInput = styled.input`
   background: var(--thirdColor);
   width: 61%;
-  border: none;
+  border-left: 2px solid var(--textColor);
   padding: .8rem 1.2rem;
   font-size: 1rem;
   color: var(--textColor);
