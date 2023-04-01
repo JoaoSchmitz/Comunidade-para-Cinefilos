@@ -50,7 +50,7 @@ export const ProjectTitle = styled.div`
 
   a {
     color: var(--textColor2);
-    text-decoration: ;
+    text-decoration: none;
   }
 
 `

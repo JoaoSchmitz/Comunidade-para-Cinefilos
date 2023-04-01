@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { IconContext } from "react-icons"
 import { FaStar } from 'react-icons/fa'
 
-import { MovieContainer, MoviePoster, MovieDetailsButton, MovieVoteAverage } from '../../styles/movieCard'
+import { MovieContainer, MoviePoster, MovieDetailsButton, MovieVoteAverage } from './style.js'
 
 
 
@@ -12,7 +12,7 @@ const MovieCardUnlogged = props => {
   const imagePath = 'https://image.tmdb.org/t/p/w500/'
 
   return (
-    <MovieContainer>
+    <MovieContainer className={props.isRecommended ? 'Recommended' : ''}>
 
       <MoviePoster src={ imagePath + props.movie.poster_path } alt={props.movie.title}/>
 
@@ -21,7 +21,7 @@ const MovieCardUnlogged = props => {
     {/* Customizes the icon */}
       <IconContext.Provider value={{ color: "var(--textColor2)", size: "1.1rem" }}>
         <MovieVoteAverage>
-          <FaStar/> {props.movie.vote_average}
+          <FaStar/> {props.movie.vote_average.toFixed(1)}
         </MovieVoteAverage>
       </IconContext.Provider>
 

@@ -1,6 +1,7 @@
 import { GlobalStyle } from './styles/global'
 import React from 'react';
 import RoutesApp from './routes';
+import { AuthProvider } from './contexts/auth'
 
 function App() {
 
@@ -23,8 +24,10 @@ function App() {
 
   return (
     <>
-      <RoutesApp />
-      <GlobalStyle />
+      <AuthProvider>
+        <RoutesApp />
+        <GlobalStyle />
+      </AuthProvider>
     </>
   );
 }

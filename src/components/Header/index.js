@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { HeaderContainer, ProjectTitle, SearchButton, SearchForm, SearchIcon, SearchInput, SidebarIcon, SidebarIconBox } from './style.js'
+import Sidebar from '../Sidebar'
 
-import { HeaderContainer, ProjectTitle, SearchButton, SearchForm, SearchIcon, SearchInput, SidebarIcon, SidebarIconBox } from '../../styles/header'
+//import { FaBars } from 'react-icons/fa'
 
 const Header = () => {
   const [search, setSearch] = useState('')
+  const [sidebar, setSidebar] = useState(false)
   const navigate = useNavigate()
 
   const handleSubmit = e => {
@@ -16,14 +19,19 @@ const Header = () => {
     setSearch('')
   }
   
+  const handleSidebar = () => {
+    setSidebar(!sidebar)
+  }
+
   return (
     <HeaderContainer>
-      <SidebarIconBox>
+      <SidebarIconBox onClick={handleSidebar}>
         <SidebarIcon size='1.8rem'/>
       </SidebarIconBox>
+      {sidebar && <Sidebar active={setSidebar} />}
 
       <ProjectTitle>
-        <Link to='/'> Project Title </Link> 
+        <Link to='/'> Sessão Pipoca </Link> 
       </ProjectTitle>
 
       <SearchForm onSubmit={handleSubmit}>

@@ -24,6 +24,10 @@ export const MovieContainer = styled.div`
     padding-bottom: 55%;
   }
 
+  &.Recommended {
+    background: var(--thirdColor);
+  }
+
 `
 
 export const MoviePoster = styled.img`
@@ -43,9 +47,9 @@ transition: border 0.3s ease-in-out;
 export const MovieVoteAverage = styled.p`
   position: absolute;
   top: 81%;
-  left: 40%;
+  left: 37%;
 
-  width: 20%;
+  width: 26%;
   color: var(--textColor2);
   font-size: 1.2rem;
 

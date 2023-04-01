@@ -23,6 +23,7 @@ export const NextPageButton = styled.button`
 
   font-size: 1.3rem;
   border-radius: 20px;
+  border: 2px solid var(--textColor);
   background: var(--secondColor);
   color: inherit;
   transition: .3s;
@@ -30,6 +31,8 @@ export const NextPageButton = styled.button`
   &:hover {
     cursor: pointer;
     color: var(--textColor2);
+    background: var(--thirdColor);
+    border: 2px solid var(--textColor2);
   }
 
 `
