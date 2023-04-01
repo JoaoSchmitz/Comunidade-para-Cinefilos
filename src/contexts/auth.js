@@ -51,5 +51,26 @@ export const AuthProvider = ({ children }) => {
             .then(data => {setUserInfo(data)})
     }
 
-    return <AuthContext.Provider value={{ userInfo, isLogged, createToken, requestSession, createSession }}>{children}</AuthContext.Provider>
+    function logOut() {
+        const bodyConfig = {
+            session_id: localStorage.getItem("api")
+        }
+
+        const init = {
+            method: "DELETE",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(bodyConfig)
+        }
+
+        fetch(`https://api.themoviedb.org/3/authentication/session?api_key=${APIKey}`, init)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+
+        setIsLogged(!isLogged)
+    }
+
+    return <AuthContext.Provider value={{ userInfo, isLogged, createToken, requestSession, createSession, logOut }}>{children}</AuthContext.Provider>
 }

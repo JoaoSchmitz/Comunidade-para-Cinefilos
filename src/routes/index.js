@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AccountProfile from "../pages/AccountProfile";
 import Home from '../pages/Home'
@@ -9,8 +9,15 @@ import Login from "../pages/Login";
 import FavoriteList from "../pages/FavoriteList";
 import ViewedList from "../pages/ViewedList";
 import Discover from "../pages/Discover";
+import useAuth from "../hooks/useAuth";
 
 const RoutesApp = () => {
+    const { createToken } = useAuth()
+    const { isLogged } = useAuth()
+
+    useEffect(() => {
+        !isLogged && createToken()
+    })
     return (
         <Router>
             <Fragment>

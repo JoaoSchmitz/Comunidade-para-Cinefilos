@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import MovieList from '../../components/MovieList'
 import useAuth from '../../hooks/useAuth'
 
@@ -7,13 +6,9 @@ import { SectionButton, SectionTitle, TextContainer } from './style'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-  const { createToken } = useAuth()
   const { isLogged } = useAuth()
   const { requestSession } = useAuth()
 
-  useEffect(() => {
-    createToken()
-  })
   return (
     <div>
       <PageContainer>
