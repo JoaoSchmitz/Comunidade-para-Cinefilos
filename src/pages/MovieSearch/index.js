@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
 import { APIKey } from "../../config/key"
 
-import Header from "../../components/Header"
 import MovieCardLogged from "../../components/MovieCard/indexLogged"
 import MovieCardUnlogged from "../../components/MovieCard/indexUnlogged"
 
@@ -42,7 +41,6 @@ const MovieSearch = () => {
 
   return (
     <>
-      <Header />
       <PageContainer>
         <SearchH2>
           Resultados da pesquisa por:
