@@ -4,6 +4,9 @@ import useAuth from '../../hooks/useAuth'
 import UserCard from '../UserCard'
 import Button from '../Button'
 import { FaTimes, FaHome } from 'react-icons/fa'
+import { RiCompassDiscoverFill } from 'react-icons/ri'
+import { MdOutlineFavorite } from 'react-icons/md'
+import { AiFillEye } from 'react-icons/ai'
 import SidebarItems from '../SidebarItems'
 
 const Sidebar = ({ active }) => {
@@ -25,9 +28,9 @@ const Sidebar = ({ active }) => {
             }
           </C.Item>
           <SidebarItems Text='Home' Icon={FaHome} Page="" closeSidebar={closeSidebar}/>
-          <SidebarItems Text='Discover' Icon={FaHome} Page="discover" closeSidebar={closeSidebar}/>
-          <SidebarItems Text='Favoritos' Icon={FaHome} Page="favorites" closeSidebar={closeSidebar}/>
-          <SidebarItems Text="Assistidos" Icon={FaHome} Page="watchlist" closeSidebar={closeSidebar}/>
+          <SidebarItems Text='Discover' Icon={RiCompassDiscoverFill} Page="discover" closeSidebar={closeSidebar}/>
+          <SidebarItems Text='Favoritos' Icon={MdOutlineFavorite} Page="favorites" closeSidebar={closeSidebar}/>
+          <SidebarItems Text="Assistidos" Icon={AiFillEye} Page="watchlist" closeSidebar={closeSidebar}/>
         </div>
         { isLogged && <Button onClick={logOut} text={'Sair'}/> }
       </C.Container>

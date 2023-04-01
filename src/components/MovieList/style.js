@@ -31,6 +31,7 @@ export const NextPageButton = styled.button`
   &:hover {
     cursor: pointer;
     color: var(--textColor2);
+    background: var(--thirdColor);
     border: 2px solid var(--textColor2);
   }
 
