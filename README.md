@@ -5,7 +5,7 @@ O site criado tem o intuito de servir como uma comunidade para cinéfilos.
 
 ## Passo a passo: Como rodar o projeto
 
-### No terminal, abra a pasta que deseja colocar o projeto e siga os comandos a seguir
+No terminal, abra a pasta que deseja colocar o projeto e siga os comandos a seguir
 
 ### `git clone https://github.com/MariaCHelena/Comunidade-para-Cinefilos.git`
 
