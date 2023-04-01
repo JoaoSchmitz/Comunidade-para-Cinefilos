@@ -48,5 +48,11 @@ export const Item = styled.li`
 
 export const Container = styled.div`
     margin-top: 80px;
-
+    margin-bottom: 40px;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
 `
