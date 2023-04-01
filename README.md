@@ -18,3 +18,7 @@ Instala as dependências do projeto.
 ### `npm start`
 
 E pronto! O site gerado será aberto em seu navegador. 
+
+## Deploy do site
+
+Você pode visualizar o site no seguinte link: [url](url).
