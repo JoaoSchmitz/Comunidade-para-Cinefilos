@@ -31,7 +31,7 @@ const Header = () => {
       {sidebar && <Sidebar active={setSidebar} />}
 
       <ProjectTitle>
-        <Link to='/'> Project Title </Link> 
+        <Link to='/'> Sessão Pipoca </Link> 
       </ProjectTitle>
 
       <SearchForm onSubmit={handleSubmit}>
