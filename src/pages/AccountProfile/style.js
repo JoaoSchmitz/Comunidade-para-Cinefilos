@@ -49,3 +49,7 @@ export const ListTitle = styled.h3`
     padding-top: 50px;
     margin-bottom: 50px;
 `
+
+export const Section = styled.section`
+    margin-bottom: 100px;
+`

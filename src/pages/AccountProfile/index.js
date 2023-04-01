@@ -2,7 +2,7 @@ import React from 'react'
 import useAuth from '../../hooks/useAuth'
 import * as C from './style'
 import profile from '../../components/UserCard/avatar.svg'
-
+import ListComponent from '../../components/PersMovieList'
 
 const AccountProfile = () => {
 
@@ -23,8 +23,14 @@ const AccountProfile = () => {
         
       </C.UserInformation>
 
-      <C.ListTitle>Filmes favoritos</C.ListTitle>
-      <C.ListTitle>Filmes assistidos</C.ListTitle>
+      <C.Section>
+        <C.ListTitle>Filmes favoritos</C.ListTitle>
+        <ListComponent type="favorite"/>
+      </C.Section>
+      <C.Section>
+        <C.ListTitle>Filmes assistidos</C.ListTitle>
+        <ListComponent type="watchlist"/>
+      </C.Section>
     </C.Main>
   )
 }
